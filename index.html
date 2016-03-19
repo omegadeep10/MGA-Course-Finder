@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="course-list">
+    {% for course in site.data.course-data %}
+      <li class="crn">{{ course.crn }}</li>
+      <li class="ptrm">{{ course.ptrm }}</li>
+      <li class="subject">{{ course.subject }}</li>
+      <li class="number">{{ course.number }}</li>
+      <li class="section">{{ course.section }}</li>
+      <li class="campus">{{ course.campus }}</li>
+      <li class="title">{{ course.title }}</li>
+      <li class="seats">{{ course.seats }}</li>
+      <li class="hours">{{ course.hours }}</li>
+      <li class="begin">{{ course.begin }}</li>
+      <li class="end">{{ course.end }}</li>
+      <li class="building">{{ course.building }}</li>
+      <li class="room">{{ course.room }}</li>
+      <li class="days">{{ course.days }}</li>
+      <li class="instructor">{{ course.instructor }}</li>
+    {% endfor %}
+  </ul>
+
+</div>

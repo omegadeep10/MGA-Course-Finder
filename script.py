@@ -45,7 +45,7 @@ def main():
     print("Working...")
     course_info = get_data(35)
     print("Writing to file...")
-    #print_data(course_info)
+    print_data(course_info)
     print("Done")
 
 
