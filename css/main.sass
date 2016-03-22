@@ -14,9 +14,41 @@
     display: table
     clear: both
 
+$primaryColor: #633393
+$heading: "Roboto", Helvetica, sans-serif
+$lightText: "Roboto Condensed", Helvetica, sans-serif
+
 ul
     text-align: left
     list-style: none
     
     li
         display: inline-block
+
+.container
+    max-width: 1080px
+    margin: 0 auto
+
+header
+    width: 100%
+    height: 290px
+    background-color: $primaryColor
+    color: white
+    padding-top: 100px
+
+    .search
+        background-color: $primaryColor
+        padding: 10px 0
+        width: 500px
+        border: none
+        border-bottom: 5px solid rgba(255, 255, 255, 0.5)
+        font-family: $heading
+        font-weight: 400
+        color: white
+        font-size: 56px
+        transition: all 0.5s ease
+
+        &:focus
+            color: white
+            border-bottom: 5px solid white
+            width: 100%
