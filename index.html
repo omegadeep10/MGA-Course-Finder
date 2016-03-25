@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+<header>
+  <div class="container">
+    <ul class="nav">
+      <li><a href="#">About</a></li>
+      <li><a href="#">GitHub</a></li>
+    </ul>
+    <h1>MGA Course Finder</h1>
+    <p>Registering for classes has never been easier.</p>
+  </div>
+</header>
+
 
 <div id="course-data">
   <input class="search" placeholder="Search" />
@@ -25,7 +36,7 @@ layout: default
       </tr>
     </thead>
     <tbody class="list">
-      {% for course in site.data.course-data %}
+      {% for course in site.data.course-data limit: 20 %}
       <tr class="">
         <td class="crn">{{ course.crn }}</td>
         <td class="ptrm">{{ course.ptrm }}</td>
