@@ -3,55 +3,49 @@ layout: default
 ---
 
 <div id="course-data">
-  <header>
-    <div class="container">
-      <input class="search" placeholder="Search" />
-    </div>
-  </header>
-  <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th class="crn">CRN</th>
-          <th class="ptrm">PTRM</th>
-          <th class="subject">SUBJECT</th>
-          <th class="number">NUMBER</th>
-          <th class="section">SECTION</th>
-          <th class="campus">CAMPUS</th>
-          <th class="title">TITLE</th>
-          <th class="seats">SEATS</th>
-          <th class="hours">HOURS</th>
-          <th class="begin">BEGINS</th>
-          <th class="end">ENDS</th>
-          <th class="building">BUILDING</th>
-          <th class="room">ROOM</th>
-          <th class="days">DAYS</th>
-          <th class="instructor">INSTRUCTOR</th>
-        </tr>
-      </thead>
-      <tbody class="list">
-        {% for course in site.data.course-data %}
-        <tr class="">
-          <td class="crn">{{ course.crn }}</td>
-          <td class="ptrm">{{ course.ptrm }}</td>
-          <td class="subject">{{ course.subject }}</td>
-          <td class="number">{{ course.number }}</td>
-          <td class="section">{{ course.section }}</td>
-          <td class="campus">{{ course.campus }}</td>
-          <td class="title">{{ course.title }}</td>
-          <td class="seats">{{ course.seats }}</td>
-          <td class="hours">{{ course.hours }}</td>
-          <td class="begin">{{ course.begin }}</td>
-          <td class="end">{{ course.end }}</td>
-          <td class="building">{{ course.building }}</td>
-          <td class="room">{{ course.room }}</td>
-          <td class="days">{{ course.days }}</td>
-          <td class="instructor">{{ course.instructor }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <input class="search" placeholder="Search" />
+  <table>
+    <thead>
+      <tr>
+        <th class="crn">CRN</th>
+        <th class="ptrm">PTRM</th>
+        <th class="subject">SUBJECT</th>
+        <th class="number">NUMBER</th>
+        <th class="section">SECTION</th>
+        <th class="campus">CAMPUS</th>
+        <th class="title">TITLE</th>
+        <th class="seats">SEATS</th>
+        <th class="hours">HOURS</th>
+        <th class="begin">BEGINS</th>
+        <th class="end">ENDS</th>
+        <th class="building">BUILDING</th>
+        <th class="room">ROOM</th>
+        <th class="days">DAYS</th>
+        <th class="instructor">INSTRUCTOR</th>
+      </tr>
+    </thead>
+    <tbody class="list">
+      {% for course in site.data.course-data %}
+      <tr class="">
+        <td class="crn">{{ course.crn }}</td>
+        <td class="ptrm">{{ course.ptrm }}</td>
+        <td class="subject">{{ course.subject }}</td>
+        <td class="number">{{ course.number }}</td>
+        <td class="section">{{ course.section }}</td>
+        <td class="campus">{{ course.campus }}</td>
+        <td class="title">{{ course.title }}</td>
+        <td class="seats">{{ course.seats }}</td>
+        <td class="hours">{{ course.hours }}</td>
+        <td class="begin">{{ course.begin }}</td>
+        <td class="end">{{ course.end }}</td>
+        <td class="building">{{ course.building }}</td>
+        <td class="room">{{ course.room }}</td>
+        <td class="days">{{ course.days }}</td>
+        <td class="instructor">{{ course.instructor }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
-    <ul class="pagination"></ul>
-  </div>
+  <ul class="pagination"></ul>
 </div>

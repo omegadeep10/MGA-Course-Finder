@@ -44,9 +44,17 @@ def main():
 
     print("Working...")
     course_info = get_data(35)
-    print("Writing to file...")
-    print_data(course_info)
-    print("Done")
+
+    subjects = []
+    for course in course_info:
+        if course[2] not in subjects:
+            subjects.append(course[2])
+
+    print(subjects)
+
+    # print("Writing to file...")
+    # print_data(course_info)
+    # print("Done")
 
 
 if __name__ == '__main__':
