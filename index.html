@@ -7,56 +7,56 @@ layout: default
       <li><a href="#">About</a></li>
       <li><a href="#">GitHub</a></li>
     </ul>
-    <h1>MGA Course Finder</h1>
+    <h1>MGA Course Manager</h1>
     <p>Registering for classes has never been easier.</p>
   </div>
 </header>
 
+<div class="container">
+  <div id="course-data">
+    <input class="search" placeholder="Search" />
+    <table>
+      <thead>
+        <tr>
+          <th class="crn hide">CRN</th>
+          <th class="ptrm hide">PTRM</th>
+          <th class="subject hide">Subject</th>
+          <th class="number hide">Number</th>
+          <th class="section hide">Section</th>
+          <th class="hours hide">Hours</th>
+          <th class="building hide">Building</th>
+          <th class="room hide">Room</th>
+          <th class="title">Class Title</th>
+          <th class="instructor">Instructor</th>
+          <th class="time">Time</th>
+          <th class="campus">Campus</th>
+          <th class="days">Days</th>
+          <th class="seats">Seats</th>
+        </tr>
+      </thead>
+      <tbody class="list">
+        {% for course in site.data.course-data %}
+        <tr>
+          <td class="crn hide">{{ course.crn }}</td>
+          <td class="ptrm hide">{{ course.ptrm }}</td>
+          <td class="subject hide">{{ course.subject }}</td>
+          <td class="number hide">{{ course.number }}</td>
+          <td class="section hide">{{ course.section }}</td>
+          <td class="hours hide">{{ course.hours }}</td>
+          <td class="building hide">{{ course.building }}</td>
+          <td class="room hide">{{ course.room }}</td>
+          <td class="title">{{ course.title }}</td>
+          <td class="instructor">{{ course.instructor }}</td>
+          <td class="type">{{ course.type }}</td>
+          <td class="time">{{ course.begin }} - {{ course.end }}</td>
+          <td class="campus">{{ course.campus }}</td>
+          <td class="days">{{ course.days }}</td>
+          <td class="seats">{{ course.seats }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
-<div id="course-data">
-  <input class="search" placeholder="Search" />
-  <table>
-    <thead>
-      <tr>
-        <th class="crn">CRN</th>
-        <th class="ptrm">PTRM</th>
-        <th class="subject">SUBJECT</th>
-        <th class="number">NUMBER</th>
-        <th class="section">SECTION</th>
-        <th class="campus">CAMPUS</th>
-        <th class="title">TITLE</th>
-        <th class="seats">SEATS</th>
-        <th class="hours">HOURS</th>
-        <th class="begin">BEGINS</th>
-        <th class="end">ENDS</th>
-        <th class="building">BUILDING</th>
-        <th class="room">ROOM</th>
-        <th class="days">DAYS</th>
-        <th class="instructor">INSTRUCTOR</th>
-      </tr>
-    </thead>
-    <tbody class="list">
-      {% for course in site.data.course-data limit: 20 %}
-      <tr class="">
-        <td class="crn">{{ course.crn }}</td>
-        <td class="ptrm">{{ course.ptrm }}</td>
-        <td class="subject">{{ course.subject }}</td>
-        <td class="number">{{ course.number }}</td>
-        <td class="section">{{ course.section }}</td>
-        <td class="campus">{{ course.campus }}</td>
-        <td class="title">{{ course.title }}</td>
-        <td class="seats">{{ course.seats }}</td>
-        <td class="hours">{{ course.hours }}</td>
-        <td class="begin">{{ course.begin }}</td>
-        <td class="end">{{ course.end }}</td>
-        <td class="building">{{ course.building }}</td>
-        <td class="room">{{ course.room }}</td>
-        <td class="days">{{ course.days }}</td>
-        <td class="instructor">{{ course.instructor }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <ul class="pagination"></ul>
+    <ul class="pagination"></ul>
+  </div>
 </div>

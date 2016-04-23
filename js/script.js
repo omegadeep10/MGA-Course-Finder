@@ -1,7 +1,8 @@
 var options = {
-    valueNames: ["crn", "ptrm", "subject", "number", "section", "campus", "title", "seats", "hours", "begin", "end", "building", "room", "days", "instructor"],
+    valueNames: ["crn", "ptrm", "subject", "number", "section", "hours", "building", "room", "title", "instructor", "time", "campus", "days", "seats"],
     page: 50,
-    plugins: [ ListPagination({
+    plugins: [ 
+    ListPagination({
         paginationClass: "pagination"
     }) ]
 };

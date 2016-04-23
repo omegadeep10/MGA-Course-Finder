@@ -16,6 +16,10 @@
 
 $primaryColor: #633393
 $heading: "Roboto", Helvetica, sans-serif
+$thin: 300
+$regular: 400
+$medium: 500
+$bold: 700
 
 
 .container
@@ -29,16 +33,19 @@ header
     background-color: $primaryColor
     color: white
 
+    .container
+        padding-left: 155px
+
     h1
         font-family: $heading
-        font-weight: 400
+        font-weight: $regular
         padding-top: 170px
         font-size: 3.7em
         padding-bottom: 10px
 
     p
         font-family: $heading
-        font-weight: 300
+        font-weight: $thin
         font-size: 1.2em
         color: rgba(255, 255, 255, 0.7)
 
@@ -56,8 +63,23 @@ header
             text-decoration: none
             color: rgba(255, 255, 255, 0.7)
             font-family: $heading
-            font-weight: 500
+            font-weight: $medium
             font-size: 1.2em
 
             &:hover
                 color: white
+
+#course-data
+    background-color: pink
+    width: 900px
+    text-align: left
+
+    .search
+        display: block
+        width: 100%
+        font-size: 24px
+        padding: 15px 50px
+        color: black
+
+    .hide
+        display: none
