@@ -28,10 +28,11 @@ layout: default
           <th class="room hide">Room</th>
           <th class="title">Class Title</th>
           <th class="instructor">Instructor</th>
+          <th class="type">Type</th>
           <th class="time">Time</th>
           <th class="campus">Campus</th>
           <th class="days">Days</th>
-          <th class="seats">Seats</th>
+          <th class="seats right-align">Seats</th>
         </tr>
       </thead>
       <tbody class="list">
@@ -51,7 +52,7 @@ layout: default
           <td class="time">{{ course.begin }} - {{ course.end }}</td>
           <td class="campus">{{ course.campus }}</td>
           <td class="days">{{ course.days }}</td>
-          <td class="seats">{{ course.seats }}</td>
+          <td class="seats right-align">{{ course.seats }}</td>
         </tr>
         {% endfor %}
       </tbody>
